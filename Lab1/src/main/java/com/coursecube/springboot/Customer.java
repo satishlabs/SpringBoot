@@ -1,5 +1,9 @@
 package com.coursecube.springboot;
 
+/**
+ * @author Admin
+ *
+ */
 public class Customer {
 	private int cid; 
 	private String cname; 
