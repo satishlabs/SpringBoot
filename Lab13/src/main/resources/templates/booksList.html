@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Satish bookStore</title>
+<link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"
+	rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">Welcome to INS BookStore!!!</h1>
+		<div class="alert alert-primary" role="alert">
+			<h2 class="text-center">Get the Latest Books</h2>
+		</div>
+		<br />
+		<table class="table table-striped table-bordered table-hover">
+			<thead class="thead-light ">
+				<tr>
+					<th>Book Id</th>
+					<th>Book Name</th>
+					<th>Author</th>
+					<th>Price</th>
+					<th>Publications</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="mybook : ${session.MyBooks}">
+					<td th:text=${mybook.bid}></td>
+					<td th:text=${mybook.bname}></td>
+					<td th:text=${mybook.author}></td>
+					<td th:text=${mybook.price}></td>
+					<td th:text=${mybook.pub}></td>
+					<td>
+						<button type="button" class="btn btn-success btn-lg">ViewBook</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn-primary btn-lg">EditBook</button>
+					</td>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
