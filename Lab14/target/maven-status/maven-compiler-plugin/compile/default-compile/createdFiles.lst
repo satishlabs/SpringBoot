@@ -1,0 +1,5 @@
+com\satish\Book.class
+com\satish\MvcConfiguration.class
+com\satish\BooksController.class
+com\satish\IndexController.class
+com\satish\SpringBootWebApplication.class
