@@ -62,8 +62,7 @@
 					<td align="center" colspan="3">
 					<input type="hidden" name="OpType" value="${OpType}" /> 
 						<c:if test="${OpType eq 'ADD'}">
-							<input type="submit" value="Add New Book" class="" btn
-								btn-primary btn-lg"/>
+							<input type="submit" value="Add New Book" class="btn btn-primary btn-lg"/>
 						</c:if> <c:if test="${OpType eq 'UPDATE' }">
 							<input type="submit" value="Update Book"
 								class="btn btn-primary btn-lg" />

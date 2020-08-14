@@ -70,15 +70,15 @@ public class BooksController {
 		return "bookList";
 	}
 	
-	@DeleteMapping("/addEditBookForm")
-	public String deleteBook(@RequestParam("bookId")Integer bookId, Model model) {
-		System.out.println("-------BookController--deleteBook()---------"); 
-		bookService.deleteBook(bookId);
-		List<Book> blist = bookService.getAllBooks();
-		model.addAttribute("MyBookList", blist);
-
-		return "booksList";
-	}
+	@PostMapping("/deleteBook")  
+	public String deleteBook(@RequestParam("bookId") Integer bookId,Model model) {
+		System.out.println("-------BookController--deleteBook()---------");   
+		bookService.deleteBook(bookId);   
+		List<Book> blist=bookService.getAllBooks();  
+		model.addAttribute("MyBooksList", blist); 
+	 
+	    return "booksList"; 
+	  }   
 
 	@GetMapping("/viewBook")
 	public String viewBook(@RequestParam("bookId")Integer bookId, Model model) {

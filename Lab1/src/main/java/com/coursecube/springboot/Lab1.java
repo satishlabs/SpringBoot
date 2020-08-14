@@ -16,7 +16,7 @@ public class Lab1
         CustomerDAO cdao = (CustomerDAO)ctx.getBean("custDAO");
         
         //1. Add Customer
-        Customer cust1 = new Customer(114, "sd", "sd@jlc", 9999, "Blore"); 
+        Customer cust1 = new Customer(214, "sd", "sd@jlc", 9999, "Blore"); 
         cdao.addCustomer(cust1);
         
      // 2. getAllCustomers 

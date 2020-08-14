@@ -27,8 +27,8 @@
 				<th colspan="2" align="center"><form:form
 						action="addEditBookForm">
 						<input type="hidden" name="bookId" value="0" />
-						<input type="submit" value="Add New Book" class="btn btn-success"
-							btn-lg>
+						<input type="submit" value="Add New Book"
+							class="btn btn-primary btn-lg">
 					</form:form></th>
 			</tr>
 			<c:forEach var="mybook" items="${MyBookList}">
@@ -44,9 +44,9 @@
 							<input type="hidden" name="bookId" value="${mybook.bid}">
 							<input type="submit" value="Edit" class="btn btn-primary btn-lg">
 						</form:form></td>
-					<td><form:form action="addEditBookForm">
-							<input type="hidden" name="bookId" value="${mybook.bid }" />
-							<input type="submit" value="  Delete  "class="btn btn-danger btn-lg" />
+					<td><form:form action="deleteBook">
+							<input type="hidden" name="bookId" value="${mybook.bid }">
+							<input type="submit" value="Delete" class="btn btn-danger btn-lg" />
 						</form:form></td>
 				</tr>
 			</c:forEach>
